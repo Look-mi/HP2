@@ -1,0 +1,187 @@
+@charset "UTF-8";
+
+@import "color";
+@import "mixin";
+
+body {
+  font-size: 15px;
+  font-family: 'Noto Serif', serif;
+  line-height: 1.8;
+  letter-spacing: 1px;
+  word-break: break-all;
+  color: $cBlack;
+}
+
+a {
+  text-decoration: none;
+  color: $cBlack;
+}
+
+li {
+  list-style: none;
+}
+
+
+header{
+  width: 100%;
+  display: inline-block;
+  background: $Black;
+
+  .logo{
+    position: absolute;
+    padding: 10px 0 0 20px;
+    z-index: 2;
+
+    img{
+      width: 150px;
+      height: auto;
+      z-index: 2;
+    }
+  }
+
+  .navbar ul{
+    display: flex;
+    float: right;
+    position: relative;
+    margin: 15px 0;
+
+    li{
+      margin: 10px;
+      padding-right: 20px;
+      border-right: solid 3px $cBlue_Light;
+
+      a{
+        color: $White;
+        font-weight: 700;
+        font-size: 15px;
+      }
+      
+      a:hover{
+        color: $cBlue_Light;
+      }
+    }
+    
+    li:last-child{
+        border-right: none;
+      }
+  }
+
+  .respons{
+    visibility: hidden;
+    width: 0;
+    height: 0;
+  }
+
+  .draewr{
+    visibility: hidden;
+  }
+}
+
+.section{
+  
+  &_ttl{
+    margin-bottom: 20px;
+    font-size: 40px;
+
+    small{
+      border-left: solid 8px $cBlue_Light;
+      padding-right: 10px;
+    }
+  }
+}
+.inner{
+  max-width: 80%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.intro{
+  width: 40%;
+
+  &_txt{
+    font-size: 18px;
+  }
+}
+
+footer{
+  padding: 50px 0 20px;
+  background: $Black;
+  color: $White;
+}
+
+.footer{
+  &_logo{
+    width: 10%;
+    height: auto;
+    margin: 0 auto;
+    margin-bottom: 40px;
+
+    img{
+      width: 100%;
+    }
+  }
+
+  &_list{
+    @include flex;
+    margin-bottom: 50px;  
+  }
+
+  &_item{
+    padding-right: 28px;
+    margin-right: 20px;
+    border-right: solid 3px $cBlue_Light;
+    font-size: 18px;
+    line-height: 1;
+
+    a{
+      color: $White;
+    }
+    a:hover{
+      color: $cBlue_Light;
+    }
+  }
+  &_item:last-child{
+    padding-right: 0;
+    margin-right: 0;
+    border-right: none;
+  }
+
+  &_sns{
+    margin-bottom: 50px;
+    @include flex;
+    align-items: center;
+
+    .sns{
+      &_icon1{
+        margin-right: 25px;
+        -webkit-transition: 0.2s;
+        transition: 0.2s;
+      }
+      &_icon2{
+        -webkit-transition: 0.2s;
+        transition: 0.2s;
+      }
+    }
+
+    .sns{
+      &_icon1:hover{
+        -webkit-transition: 0.2s;
+        transition: 0.2s;
+        -webkit-transform: translateY(-5px);
+        transform: translateY(-5px);
+      }
+      &_icon2:hover{
+        -webkit-transition: 0.2s;
+        transition: 0.2s;
+        -webkit-transform: translateY(-5px);
+        transform: translateY(-5px);
+      }
+    }
+  }
+
+  &_txt{
+    display: block;
+    text-align: center;
+    font-size: 15px;
+  }
+}
